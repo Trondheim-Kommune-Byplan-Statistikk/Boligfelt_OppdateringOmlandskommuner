@@ -757,157 +757,157 @@ function fnc_project_color(values, context) {
 
 
 
-function exp_Boligertattibruki2021_4rule0_eval_expression(context) {
-    // "BOLIGIKAP" = 1
+function exp_Boligertattibruki20132022_6rule0_eval_expression(context) {
+    // Antall_boliger = 1
 
     var feature = context.feature;
     
     if (feature.properties) {
-        return (feature.properties['BOLIGIKAP']  == 1);
+        return (feature.properties['Antall_boliger']  == 1);
     } else {
-        return (feature['BOLIGIKAP']  == 1);
+        return (feature['Antall_boliger']  == 1);
     }
 }
 
 
-function exp_Boligertattibruki2021_4rule1_eval_expression(context) {
-    // "BOLIGIKAP" >= 2
+function exp_Boligertattibruki20132022_6rule1_eval_expression(context) {
+    // Antall_boliger >= 2
 
     var feature = context.feature;
     
     if (feature.properties) {
-        return (feature.properties['BOLIGIKAP']  >= 2);
+        return (feature.properties['Antall_boliger']  >= 2);
     } else {
-        return (feature['BOLIGIKAP']  >= 2);
+        return (feature['Antall_boliger']  >= 2);
     }
 }
 
 
-function exp_Boligertattibruki2022_5rule0_eval_expression(context) {
-    // "BOLIGIKAP" = 1
+function exp_Boligertattibruki2023_7rule0_eval_expression(context) {
+    // Antall_boliger = 1
 
     var feature = context.feature;
     
     if (feature.properties) {
-        return (feature.properties['BOLIGIKAP']  == 1);
+        return (feature.properties['Antall_boliger']  == 1);
     } else {
-        return (feature['BOLIGIKAP']  == 1);
+        return (feature['Antall_boliger']  == 1);
     }
 }
 
 
-function exp_Boligertattibruki2022_5rule1_eval_expression(context) {
-    // "BOLIGIKAP" >= 2
+function exp_Boligertattibruki2023_7rule1_eval_expression(context) {
+    // Antall_boliger >= 2
 
     var feature = context.feature;
     
     if (feature.properties) {
-        return (feature.properties['BOLIGIKAP']  >= 2);
+        return (feature.properties['Antall_boliger']  >= 2);
     } else {
-        return (feature['BOLIGIKAP']  >= 2);
+        return (feature['Antall_boliger']  >= 2);
     }
 }
 
 
-function exp_Boligertattibruki2023_6rule0_eval_expression(context) {
-    // "BOLIGIKAP" = 1
+function exp_Boligertattibruki2024_8rule0_eval_expression(context) {
+    // Antall_boliger = 1
 
     var feature = context.feature;
     
     if (feature.properties) {
-        return (feature.properties['BOLIGIKAP']  == 1);
+        return (feature.properties['Antall_boliger']  == 1);
     } else {
-        return (feature['BOLIGIKAP']  == 1);
+        return (feature['Antall_boliger']  == 1);
     }
 }
 
 
-function exp_Boligertattibruki2023_6rule1_eval_expression(context) {
-    // "BOLIGIKAP" >= 2
+function exp_Boligertattibruki2024_8rule1_eval_expression(context) {
+    // Antall_boliger >= 2
 
     var feature = context.feature;
     
     if (feature.properties) {
-        return (feature.properties['BOLIGIKAP']  >= 2);
+        return (feature.properties['Antall_boliger']  >= 2);
     } else {
-        return (feature['BOLIGIKAP']  >= 2);
+        return (feature['Antall_boliger']  >= 2);
     }
 }
 
 
-function exp_Boligertattibrukhittilir13032024_7rule0_eval_expression(context) {
-    // "BOLIGIKAP" = 1
+function exp_Boligertattibrukhittilir14022025_9rule0_eval_expression(context) {
+    // Antall_boliger = 1
 
     var feature = context.feature;
     
     if (feature.properties) {
-        return (feature.properties['BOLIGIKAP']  == 1);
+        return (feature.properties['Antall_boliger']  == 1);
     } else {
-        return (feature['BOLIGIKAP']  == 1);
+        return (feature['Antall_boliger']  == 1);
     }
 }
 
 
-function exp_Boligertattibrukhittilir13032024_7rule1_eval_expression(context) {
-    // "BOLIGIKAP" >= 2
+function exp_Boligertattibrukhittilir14022025_9rule1_eval_expression(context) {
+    // Antall_boliger >= 2
 
     var feature = context.feature;
     
     if (feature.properties) {
-        return (feature.properties['BOLIGIKAP']  >= 2);
+        return (feature.properties['Antall_boliger']  >= 2);
     } else {
-        return (feature['BOLIGIKAP']  >= 2);
+        return (feature['Antall_boliger']  >= 2);
     }
 }
 
 
-function exp_Boligerigangsattikketattibruk_8rule0_eval_expression(context) {
-    // "BOLIGIKAP" = 1
+function exp_Boligerigangsattikketattibruk_10rule0_eval_expression(context) {
+    // Antall_boliger = 1
 
     var feature = context.feature;
     
     if (feature.properties) {
-        return (feature.properties['BOLIGIKAP']  == 1);
+        return (feature.properties['Antall_boliger']  == 1);
     } else {
-        return (feature['BOLIGIKAP']  == 1);
+        return (feature['Antall_boliger']  == 1);
     }
 }
 
 
-function exp_Boligerigangsattikketattibruk_8rule1_eval_expression(context) {
-    // "BOLIGIKAP" >= 2
+function exp_Boligerigangsattikketattibruk_10rule1_eval_expression(context) {
+    // Antall_boliger >= 2
 
     var feature = context.feature;
     
     if (feature.properties) {
-        return (feature.properties['BOLIGIKAP']  >= 2);
+        return (feature.properties['Antall_boliger']  >= 2);
     } else {
-        return (feature['BOLIGIKAP']  >= 2);
+        return (feature['Antall_boliger']  >= 2);
     }
 }
 
 
-function exp_Boligergodkjentikkeigangsatt_9rule0_eval_expression(context) {
-    // "BOLIGIKAP" = 1
+function exp_Boligergodkjentikkeigangsatt_11rule0_eval_expression(context) {
+    // Antall_boliger = 1
 
     var feature = context.feature;
     
     if (feature.properties) {
-        return (feature.properties['BOLIGIKAP']  == 1);
+        return (feature.properties['Antall_boliger']  == 1);
     } else {
-        return (feature['BOLIGIKAP']  == 1);
+        return (feature['Antall_boliger']  == 1);
     }
 }
 
 
-function exp_Boligergodkjentikkeigangsatt_9rule1_eval_expression(context) {
-    // "BOLIGIKAP" >= 2
+function exp_Boligergodkjentikkeigangsatt_11rule1_eval_expression(context) {
+    // Antall_boliger >= 2
 
     var feature = context.feature;
     
     if (feature.properties) {
-        return (feature.properties['BOLIGIKAP']  >= 2);
+        return (feature.properties['Antall_boliger']  >= 2);
     } else {
-        return (feature['BOLIGIKAP']  >= 2);
+        return (feature['Antall_boliger']  >= 2);
     }
 }

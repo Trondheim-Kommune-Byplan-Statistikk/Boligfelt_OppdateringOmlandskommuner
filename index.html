@@ -33,15 +33,17 @@
         <script src="js/rbush.min.js"></script>
         <script src="js/labelgun.min.js"></script>
         <script src="js/labels.js"></script>
-        <script src="data/TR2023PlansoneogSkolekretsdeler_1.js"></script>
-        <script src="data/InngriUspesifisertSpredtogAndrefelt_2.js"></script>
-        <script src="data/Boligfeltper22082023_3.js"></script>
-        <script src="data/Boligertattibruki2021_4.js"></script>
-        <script src="data/Boligertattibruki2022_5.js"></script>
-        <script src="data/Boligertattibruki2023_6.js"></script>
-        <script src="data/Boligertattibrukhittilir13032024_7.js"></script>
-        <script src="data/Boligerigangsattikketattibruk_8.js"></script>
-        <script src="data/Boligergodkjentikkeigangsatt_9.js"></script>
+        <script src="data/TR2024PlansoneogSkolekretsdeler_1.js"></script>
+        <script src="data/TR2024Ungdomsskolekretser_2.js"></script>
+        <script src="data/TR2024Barneskolekretser_3.js"></script>
+        <script src="data/InngriUspesifisertSpredtogAndrefelt_4.js"></script>
+        <script src="data/Boligfeltper19092024_5.js"></script>
+        <script src="data/Boligertattibruki20132022_6.js"></script>
+        <script src="data/Boligertattibruki2023_7.js"></script>
+        <script src="data/Boligertattibruki2024_8.js"></script>
+        <script src="data/Boligertattibrukhittilir14022025_9.js"></script>
+        <script src="data/Boligerigangsattikketattibruk_10.js"></script>
+        <script src="data/Boligergodkjentikkeigangsatt_11.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:18, minZoom:8
@@ -77,44 +79,44 @@
                 map.fitBounds(bounds_group.getBounds());
             }
         }
-        map.createPane('pane_TopografiskbakgrunnskartESRI_0');
-        map.getPane('pane_TopografiskbakgrunnskartESRI_0').style.zIndex = 400;
-        var layer_TopografiskbakgrunnskartESRI_0 = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
-            pane: 'pane_TopografiskbakgrunnskartESRI_0',
+        map.createPane('pane_OpenStreetMap_0');
+        map.getPane('pane_OpenStreetMap_0').style.zIndex = 400;
+        var layer_OpenStreetMap_0 = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            pane: 'pane_OpenStreetMap_0',
             opacity: 1.0,
             attribution: '',
             minZoom: 8,
             maxZoom: 18,
             minNativeZoom: 0,
-            maxNativeZoom: 18
+            maxNativeZoom: 19
         });
-        layer_TopografiskbakgrunnskartESRI_0;
-        map.addLayer(layer_TopografiskbakgrunnskartESRI_0);
-        function pop_TR2023PlansoneogSkolekretsdeler_1(feature, layer) {
+        layer_OpenStreetMap_0;
+        map.addLayer(layer_OpenStreetMap_0);
+        function pop_TR2024PlansoneogSkolekretsdeler_1(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">TR2023</th>\
-                        <td class="visible-with-data" id="TR2023">' + (feature.properties['TR2023'] !== null ? autolinker.link(feature.properties['TR2023'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Plansonenr</th>\
+                        <td>' + (feature.properties['Plansonenr'] !== null ? autolinker.link(feature.properties['Plansonenr'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">TR2023nvn</th>\
-                        <td>' + (feature.properties['TR2023nvn'] !== null ? autolinker.link(feature.properties['TR2023nvn'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Plansonenavn</th>\
+                        <td>' + (feature.properties['Plansonenavn'] !== null ? autolinker.link(feature.properties['Plansonenavn'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">TR2023BSK</th>\
-                        <td>' + (feature.properties['TR2023BSK'] !== null ? autolinker.link(feature.properties['TR2023BSK'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Barneskolenr</th>\
+                        <td>' + (feature.properties['Barneskolenr'] !== null ? autolinker.link(feature.properties['Barneskolenr'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">TR2023BSKNVN</th>\
-                        <td>' + (feature.properties['TR2023BSKNVN'] !== null ? autolinker.link(feature.properties['TR2023BSKNVN'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Barneskolenavn</th>\
+                        <td>' + (feature.properties['Barneskolenavn'] !== null ? autolinker.link(feature.properties['Barneskolenavn'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">TR2023USK</th>\
-                        <td>' + (feature.properties['TR2023USK'] !== null ? autolinker.link(feature.properties['TR2023USK'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Ungdomsskolenr</th>\
+                        <td>' + (feature.properties['Ungdomsskolenr'] !== null ? autolinker.link(feature.properties['Ungdomsskolenr'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">TR2023USKnvn</th>\
-                        <td>' + (feature.properties['TR2023USKnvn'] !== null ? autolinker.link(feature.properties['TR2023USKnvn'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Ungdomskolenavn</th>\
+                        <td>' + (feature.properties['Ungdomskolenavn'] !== null ? autolinker.link(feature.properties['Ungdomskolenavn'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -124,9 +126,9 @@
             popup.setContent(updatedContent);
         }
 
-        function style_TR2023PlansoneogSkolekretsdeler_1_0() {
+        function style_TR2024PlansoneogSkolekretsdeler_1_0() {
             return {
-                pane: 'pane_TR2023PlansoneogSkolekretsdeler_1',
+                pane: 'pane_TR2024PlansoneogSkolekretsdeler_1',
                 opacity: 1,
                 color: 'rgba(33,1,177,1.0)',
                 dashArray: '',
@@ -139,21 +141,113 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_TR2023PlansoneogSkolekretsdeler_1');
-        map.getPane('pane_TR2023PlansoneogSkolekretsdeler_1').style.zIndex = 401;
-        map.getPane('pane_TR2023PlansoneogSkolekretsdeler_1').style['mix-blend-mode'] = 'normal';
-        var layer_TR2023PlansoneogSkolekretsdeler_1 = new L.geoJson(json_TR2023PlansoneogSkolekretsdeler_1, {
+        map.createPane('pane_TR2024PlansoneogSkolekretsdeler_1');
+        map.getPane('pane_TR2024PlansoneogSkolekretsdeler_1').style.zIndex = 401;
+        map.getPane('pane_TR2024PlansoneogSkolekretsdeler_1').style['mix-blend-mode'] = 'normal';
+        var layer_TR2024PlansoneogSkolekretsdeler_1 = new L.geoJson(json_TR2024PlansoneogSkolekretsdeler_1, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_TR2023PlansoneogSkolekretsdeler_1',
-            layerName: 'layer_TR2023PlansoneogSkolekretsdeler_1',
-            pane: 'pane_TR2023PlansoneogSkolekretsdeler_1',
-            onEachFeature: pop_TR2023PlansoneogSkolekretsdeler_1,
-            style: style_TR2023PlansoneogSkolekretsdeler_1_0,
+            dataVar: 'json_TR2024PlansoneogSkolekretsdeler_1',
+            layerName: 'layer_TR2024PlansoneogSkolekretsdeler_1',
+            pane: 'pane_TR2024PlansoneogSkolekretsdeler_1',
+            onEachFeature: pop_TR2024PlansoneogSkolekretsdeler_1,
+            style: style_TR2024PlansoneogSkolekretsdeler_1_0,
         });
-        bounds_group.addLayer(layer_TR2023PlansoneogSkolekretsdeler_1);
-        map.addLayer(layer_TR2023PlansoneogSkolekretsdeler_1);
-        function pop_InngriUspesifisertSpredtogAndrefelt_2(feature, layer) {
+        bounds_group.addLayer(layer_TR2024PlansoneogSkolekretsdeler_1);
+        map.addLayer(layer_TR2024PlansoneogSkolekretsdeler_1);
+        function pop_TR2024Ungdomsskolekretser_2(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">TR2024USK</th>\
+                        <td>' + (feature.properties['TR2024USK'] !== null ? autolinker.link(feature.properties['TR2024USK'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Ungdomsskole</th>\
+                        <td>' + (feature.properties['Ungdomsskole'] !== null ? autolinker.link(feature.properties['Ungdomsskole'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+            var popup = layer.getPopup();
+            var content = popup.getContent();
+            var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
+            popup.setContent(updatedContent);
+        }
+
+        function style_TR2024Ungdomsskolekretser_2_0() {
+            return {
+                pane: 'pane_TR2024Ungdomsskolekretser_2',
+                opacity: 1,
+                color: 'rgba(251,154,153,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 4.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(67,148,214,0.0)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_TR2024Ungdomsskolekretser_2');
+        map.getPane('pane_TR2024Ungdomsskolekretser_2').style.zIndex = 402;
+        map.getPane('pane_TR2024Ungdomsskolekretser_2').style['mix-blend-mode'] = 'normal';
+        var layer_TR2024Ungdomsskolekretser_2 = new L.geoJson(json_TR2024Ungdomsskolekretser_2, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_TR2024Ungdomsskolekretser_2',
+            layerName: 'layer_TR2024Ungdomsskolekretser_2',
+            pane: 'pane_TR2024Ungdomsskolekretser_2',
+            onEachFeature: pop_TR2024Ungdomsskolekretser_2,
+            style: style_TR2024Ungdomsskolekretser_2_0,
+        });
+        bounds_group.addLayer(layer_TR2024Ungdomsskolekretser_2);
+        function pop_TR2024Barneskolekretser_3(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">TR2024BSK</th>\
+                        <td>' + (feature.properties['TR2024BSK'] !== null ? autolinker.link(feature.properties['TR2024BSK'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Barneskole</th>\
+                        <td>' + (feature.properties['Barneskole'] !== null ? autolinker.link(feature.properties['Barneskole'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+            var popup = layer.getPopup();
+            var content = popup.getContent();
+            var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
+            popup.setContent(updatedContent);
+        }
+
+        function style_TR2024Barneskolekretser_3_0() {
+            return {
+                pane: 'pane_TR2024Barneskolekretser_3',
+                opacity: 1,
+                color: 'rgba(230,179,24,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 4.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(67,148,214,0.0)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_TR2024Barneskolekretser_3');
+        map.getPane('pane_TR2024Barneskolekretser_3').style.zIndex = 403;
+        map.getPane('pane_TR2024Barneskolekretser_3').style['mix-blend-mode'] = 'normal';
+        var layer_TR2024Barneskolekretser_3 = new L.geoJson(json_TR2024Barneskolekretser_3, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_TR2024Barneskolekretser_3',
+            layerName: 'layer_TR2024Barneskolekretser_3',
+            pane: 'pane_TR2024Barneskolekretser_3',
+            onEachFeature: pop_TR2024Barneskolekretser_3,
+            style: style_TR2024Barneskolekretser_3_0,
+        });
+        bounds_group.addLayer(layer_TR2024Barneskolekretser_3);
+        function pop_InngriUspesifisertSpredtogAndrefelt_4(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <th scope="row">FELT_NR</th>\
@@ -171,9 +265,9 @@
             popup.setContent(updatedContent);
         }
 
-        function style_InngriUspesifisertSpredtogAndrefelt_2_0() {
+        function style_InngriUspesifisertSpredtogAndrefelt_4_0() {
             return {
-                pane: 'pane_InngriUspesifisertSpredtogAndrefelt_2',
+                pane: 'pane_InngriUspesifisertSpredtogAndrefelt_4',
                 opacity: 1,
                 color: 'rgba(51,160,44,1.0)',
                 dashArray: '',
@@ -186,21 +280,21 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_InngriUspesifisertSpredtogAndrefelt_2');
-        map.getPane('pane_InngriUspesifisertSpredtogAndrefelt_2').style.zIndex = 402;
-        map.getPane('pane_InngriUspesifisertSpredtogAndrefelt_2').style['mix-blend-mode'] = 'normal';
-        var layer_InngriUspesifisertSpredtogAndrefelt_2 = new L.geoJson(json_InngriUspesifisertSpredtogAndrefelt_2, {
+        map.createPane('pane_InngriUspesifisertSpredtogAndrefelt_4');
+        map.getPane('pane_InngriUspesifisertSpredtogAndrefelt_4').style.zIndex = 404;
+        map.getPane('pane_InngriUspesifisertSpredtogAndrefelt_4').style['mix-blend-mode'] = 'normal';
+        var layer_InngriUspesifisertSpredtogAndrefelt_4 = new L.geoJson(json_InngriUspesifisertSpredtogAndrefelt_4, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_InngriUspesifisertSpredtogAndrefelt_2',
-            layerName: 'layer_InngriUspesifisertSpredtogAndrefelt_2',
-            pane: 'pane_InngriUspesifisertSpredtogAndrefelt_2',
-            onEachFeature: pop_InngriUspesifisertSpredtogAndrefelt_2,
-            style: style_InngriUspesifisertSpredtogAndrefelt_2_0,
+            dataVar: 'json_InngriUspesifisertSpredtogAndrefelt_4',
+            layerName: 'layer_InngriUspesifisertSpredtogAndrefelt_4',
+            pane: 'pane_InngriUspesifisertSpredtogAndrefelt_4',
+            onEachFeature: pop_InngriUspesifisertSpredtogAndrefelt_4,
+            style: style_InngriUspesifisertSpredtogAndrefelt_4_0,
         });
-        bounds_group.addLayer(layer_InngriUspesifisertSpredtogAndrefelt_2);
-        map.addLayer(layer_InngriUspesifisertSpredtogAndrefelt_2);
-        function pop_Boligfeltper22082023_3(feature, layer) {
+        bounds_group.addLayer(layer_InngriUspesifisertSpredtogAndrefelt_4);
+        map.addLayer(layer_InngriUspesifisertSpredtogAndrefelt_4);
+        function pop_Boligfeltper19092024_5(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <th scope="row">FELT_NR</th>\
@@ -211,10 +305,6 @@
                         <td>' + (feature.properties['Boligfeltnavn'] !== null ? autolinker.link(feature.properties['Boligfeltnavn'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">STATUSKP</th>\
-                        <td>' + (feature.properties['STATUSKP'] !== null ? autolinker.link(feature.properties['STATUSKP'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
                         <th scope="row">STATUSRP</th>\
                         <td>' + (feature.properties['STATUSRP'] !== null ? autolinker.link(feature.properties['STATUSRP'].toLocaleString()) : '') + '</td>\
                     </tr>\
@@ -223,20 +313,16 @@
                         <td>' + (feature.properties['PLANTYPE'] !== null ? autolinker.link(feature.properties['PLANTYPE'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Saksnummer</th>\
-                        <td class="visible-with-data" id="Saksnummer">' + (feature.properties['Saksnummer'] !== null ? autolinker.link(feature.properties['Saksnummer'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
                         <th scope="row">Detaljplan planID</th>\
                         <td>' + (feature.properties['Detaljplan planID'] !== null ? autolinker.link(feature.properties['Detaljplan planID'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Detaljplan vedtatt</th>\
-                        <td class="visible-with-data" id="Detaljplan vedtatt">' + (feature.properties['Detaljplan vedtatt'] !== null ? autolinker.link(feature.properties['Detaljplan vedtatt'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Områdeplan planID</th>\
+                        <td>' + (feature.properties['Områdeplan planID'] !== null ? autolinker.link(feature.properties['Områdeplan planID'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Områdeplan planID</th>\
-                        <td class="visible-with-data" id="Områdeplan planID">' + (feature.properties['Områdeplan planID'] !== null ? autolinker.link(feature.properties['Områdeplan planID'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Boligpotensial 1.1.2021</th>\
+                        <td>' + (feature.properties['Boligpotensial 1.1.2021'] !== null ? autolinker.link(feature.properties['Boligpotensial 1.1.2021'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">BT1: Ene- og tomannsbolig</th>\
@@ -259,16 +345,8 @@
                         <td>' + (feature.properties['BT5: Studentbolig'] !== null ? autolinker.link(feature.properties['BT5: Studentbolig'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Fra: Tidligste innflyttingsår</th>\
-                        <td>' + (feature.properties['Fra: Tidligste innflyttingsår'] !== null ? autolinker.link(feature.properties['Fra: Tidligste innflyttingsår'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Til: Tidligst ferdig</th>\
-                        <td>' + (feature.properties['Til: Tidligst ferdig'] !== null ? autolinker.link(feature.properties['Til: Tidligst ferdig'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Boligreserve 1.1.2023</th>\
-                        <td>' + (feature.properties['Boligreserve 1.1.2023'] !== null ? autolinker.link(feature.properties['Boligreserve 1.1.2023'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Modningsgrad</th>\
+                        <td>' + (feature.properties['Modningsgrad'] !== null ? autolinker.link(feature.properties['Modningsgrad'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -278,9 +356,9 @@
             popup.setContent(updatedContent);
         }
 
-        function style_Boligfeltper22082023_3_0() {
+        function style_Boligfeltper19092024_5_0() {
             return {
-                pane: 'pane_Boligfeltper22082023_3',
+                pane: 'pane_Boligfeltper19092024_5',
                 opacity: 1,
                 color: 'rgba(227,26,28,1.0)',
                 dashArray: '',
@@ -293,72 +371,49 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_Boligfeltper22082023_3');
-        map.getPane('pane_Boligfeltper22082023_3').style.zIndex = 403;
-        map.getPane('pane_Boligfeltper22082023_3').style['mix-blend-mode'] = 'normal';
-        var layer_Boligfeltper22082023_3 = new L.geoJson(json_Boligfeltper22082023_3, {
+        map.createPane('pane_Boligfeltper19092024_5');
+        map.getPane('pane_Boligfeltper19092024_5').style.zIndex = 405;
+        map.getPane('pane_Boligfeltper19092024_5').style['mix-blend-mode'] = 'normal';
+        var layer_Boligfeltper19092024_5 = new L.geoJson(json_Boligfeltper19092024_5, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Boligfeltper22082023_3',
-            layerName: 'layer_Boligfeltper22082023_3',
-            pane: 'pane_Boligfeltper22082023_3',
-            onEachFeature: pop_Boligfeltper22082023_3,
-            style: style_Boligfeltper22082023_3_0,
+            dataVar: 'json_Boligfeltper19092024_5',
+            layerName: 'layer_Boligfeltper19092024_5',
+            pane: 'pane_Boligfeltper19092024_5',
+            onEachFeature: pop_Boligfeltper19092024_5,
+            style: style_Boligfeltper19092024_5_0,
         });
-        bounds_group.addLayer(layer_Boligfeltper22082023_3);
-        map.addLayer(layer_Boligfeltper22082023_3);
-        function pop_Boligertattibruki2021_4(feature, layer) {
+        bounds_group.addLayer(layer_Boligfeltper19092024_5);
+        map.addLayer(layer_Boligfeltper19092024_5);
+        function pop_Boligertattibruki20132022_6(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(feature.properties['fid'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Klassifikasjon</th>\
+                        <td>' + (feature.properties['Klassifikasjon'] !== null ? autolinker.link(feature.properties['Klassifikasjon'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">X</th>\
-                        <td>' + (feature.properties['X'] !== null ? autolinker.link(feature.properties['X'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Bygningstype</th>\
+                        <td>' + (feature.properties['Bygningstype'] !== null ? autolinker.link(feature.properties['Bygningstype'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Y</th>\
-                        <td>' + (feature.properties['Y'] !== null ? autolinker.link(feature.properties['Y'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Bygningsstatus</th>\
+                        <td>' + (feature.properties['Bygningsstatus'] !== null ? autolinker.link(feature.properties['Bygningsstatus'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">CLASS</th>\
-                        <td>' + (feature.properties['CLASS'] !== null ? autolinker.link(feature.properties['CLASS'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Dato_gitt_ramme</th>\
+                        <td>' + (feature.properties['Dato_gitt_ramme'] !== null ? autolinker.link(feature.properties['Dato_gitt_ramme'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">BYGNINGSNR</th>\
-                        <td>' + (feature.properties['BYGNINGSNR'] !== null ? autolinker.link(feature.properties['BYGNINGSNR'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Dato_igangsatt</th>\
+                        <td>' + (feature.properties['Dato_igangsatt'] !== null ? autolinker.link(feature.properties['Dato_igangsatt'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">TILBYGGSNR</th>\
-                        <td>' + (feature.properties['TILBYGGSNR'] !== null ? autolinker.link(feature.properties['TILBYGGSNR'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Dato_tatt_i_bruk</th>\
+                        <td>' + (feature.properties['Dato_tatt_i_bruk'] !== null ? autolinker.link(feature.properties['Dato_tatt_i_bruk'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">BYGNTYPE</th>\
-                        <td>' + (feature.properties['BYGNTYPE'] !== null ? autolinker.link(feature.properties['BYGNTYPE'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">BYGNSTATUS</th>\
-                        <td>' + (feature.properties['BYGNSTATUS'] !== null ? autolinker.link(feature.properties['BYGNSTATUS'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">GODKJ_D</th>\
-                        <td>' + (feature.properties['GODKJ_D'] !== null ? autolinker.link(feature.properties['GODKJ_D'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">IGANG_D</th>\
-                        <td>' + (feature.properties['IGANG_D'] !== null ? autolinker.link(feature.properties['IGANG_D'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">IBRUK_D</th>\
-                        <td>' + (feature.properties['IBRUK_D'] !== null ? autolinker.link(feature.properties['IBRUK_D'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">KNR</th>\
-                        <td>' + (feature.properties['KNR'] !== null ? autolinker.link(feature.properties['KNR'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">BOLIGIKAP</th>\
-                        <td>' + (feature.properties['BOLIGIKAP'] !== null ? autolinker.link(feature.properties['BOLIGIKAP'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Antall_boliger</th>\
+                        <td>' + (feature.properties['Antall_boliger'] !== null ? autolinker.link(feature.properties['Antall_boliger'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -367,15 +422,15 @@
             var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
             popup.setContent(updatedContent);
         }
-        function style_Boligertattibruki2021_4_0(feature) {
+        function style_Boligertattibruki20132022_6_0(feature) {
             var context = {
                 feature: feature,
                 variables: {}
             };
             // Start of if blocks and style check logic
-            if (exp_Boligertattibruki2021_4rule0_eval_expression(context)) {
+            if (exp_Boligertattibruki20132022_6rule0_eval_expression(context)) {
                   return {
-                pane: 'pane_Boligertattibruki2021_4',
+                pane: 'pane_Boligertattibruki20132022_6',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(0,0,0,0.0)',
@@ -389,9 +444,9 @@
                 interactive: true,
             };
                 }
-                else if (exp_Boligertattibruki2021_4rule1_eval_expression(context)) {
+                else if (exp_Boligertattibruki20132022_6rule1_eval_expression(context)) {
                   return {
-                pane: 'pane_Boligertattibruki2021_4',
+                pane: 'pane_Boligertattibruki20132022_6',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(0,0,0,0.0)',
@@ -409,77 +464,54 @@
                 return {fill: false, stroke: false};
             }
         }
-        map.createPane('pane_Boligertattibruki2021_4');
-        map.getPane('pane_Boligertattibruki2021_4').style.zIndex = 404;
-        map.getPane('pane_Boligertattibruki2021_4').style['mix-blend-mode'] = 'normal';
-        var layer_Boligertattibruki2021_4 = new L.geoJson(json_Boligertattibruki2021_4, {
+        map.createPane('pane_Boligertattibruki20132022_6');
+        map.getPane('pane_Boligertattibruki20132022_6').style.zIndex = 406;
+        map.getPane('pane_Boligertattibruki20132022_6').style['mix-blend-mode'] = 'normal';
+        var layer_Boligertattibruki20132022_6 = new L.geoJson(json_Boligertattibruki20132022_6, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Boligertattibruki2021_4',
-            layerName: 'layer_Boligertattibruki2021_4',
-            pane: 'pane_Boligertattibruki2021_4',
-            onEachFeature: pop_Boligertattibruki2021_4,
+            dataVar: 'json_Boligertattibruki20132022_6',
+            layerName: 'layer_Boligertattibruki20132022_6',
+            pane: 'pane_Boligertattibruki20132022_6',
+            onEachFeature: pop_Boligertattibruki20132022_6,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_Boligertattibruki2021_4_0(feature));
+                return L.circleMarker(latlng, style_Boligertattibruki20132022_6_0(feature));
             },
         });
-        bounds_group.addLayer(layer_Boligertattibruki2021_4);
-        function pop_Boligertattibruki2022_5(feature, layer) {
+        bounds_group.addLayer(layer_Boligertattibruki20132022_6);
+        function pop_Boligertattibruki2023_7(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(feature.properties['fid'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Klassifikasjon</th>\
+                        <td>' + (feature.properties['Klassifikasjon'] !== null ? autolinker.link(feature.properties['Klassifikasjon'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">X</th>\
-                        <td>' + (feature.properties['X'] !== null ? autolinker.link(feature.properties['X'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Bygningstype</th>\
+                        <td>' + (feature.properties['Bygningstype'] !== null ? autolinker.link(feature.properties['Bygningstype'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Y</th>\
-                        <td>' + (feature.properties['Y'] !== null ? autolinker.link(feature.properties['Y'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Bygningsstatus</th>\
+                        <td>' + (feature.properties['Bygningsstatus'] !== null ? autolinker.link(feature.properties['Bygningsstatus'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">CLASS</th>\
-                        <td>' + (feature.properties['CLASS'] !== null ? autolinker.link(feature.properties['CLASS'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Dato_gitt_ramme</th>\
+                        <td>' + (feature.properties['Dato_gitt_ramme'] !== null ? autolinker.link(feature.properties['Dato_gitt_ramme'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">BYGNINGSNR</th>\
-                        <td>' + (feature.properties['BYGNINGSNR'] !== null ? autolinker.link(feature.properties['BYGNINGSNR'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Dato_igangsatt</th>\
+                        <td>' + (feature.properties['Dato_igangsatt'] !== null ? autolinker.link(feature.properties['Dato_igangsatt'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">TILBYGGSNR</th>\
-                        <td>' + (feature.properties['TILBYGGSNR'] !== null ? autolinker.link(feature.properties['TILBYGGSNR'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Dato_tatt_i_bruk</th>\
+                        <td>' + (feature.properties['Dato_tatt_i_bruk'] !== null ? autolinker.link(feature.properties['Dato_tatt_i_bruk'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">BYGNTYPE</th>\
-                        <td>' + (feature.properties['BYGNTYPE'] !== null ? autolinker.link(feature.properties['BYGNTYPE'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">BYGNSTATUS</th>\
-                        <td>' + (feature.properties['BYGNSTATUS'] !== null ? autolinker.link(feature.properties['BYGNSTATUS'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">GODKJ_D</th>\
-                        <td>' + (feature.properties['GODKJ_D'] !== null ? autolinker.link(feature.properties['GODKJ_D'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">IGANG_D</th>\
-                        <td>' + (feature.properties['IGANG_D'] !== null ? autolinker.link(feature.properties['IGANG_D'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">IBRUK_D</th>\
-                        <td>' + (feature.properties['IBRUK_D'] !== null ? autolinker.link(feature.properties['IBRUK_D'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">KNR</th>\
-                        <td>' + (feature.properties['KNR'] !== null ? autolinker.link(feature.properties['KNR'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">BOLIGIKAP</th>\
-                        <td>' + (feature.properties['BOLIGIKAP'] !== null ? autolinker.link(feature.properties['BOLIGIKAP'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Antall_boliger</th>\
+                        <td>' + (feature.properties['Antall_boliger'] !== null ? autolinker.link(feature.properties['Antall_boliger'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -488,15 +520,15 @@
             var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
             popup.setContent(updatedContent);
         }
-        function style_Boligertattibruki2022_5_0(feature) {
+        function style_Boligertattibruki2023_7_0(feature) {
             var context = {
                 feature: feature,
                 variables: {}
             };
             // Start of if blocks and style check logic
-            if (exp_Boligertattibruki2022_5rule0_eval_expression(context)) {
+            if (exp_Boligertattibruki2023_7rule0_eval_expression(context)) {
                   return {
-                pane: 'pane_Boligertattibruki2022_5',
+                pane: 'pane_Boligertattibruki2023_7',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(0,0,0,0.0)',
@@ -510,9 +542,9 @@
                 interactive: true,
             };
                 }
-                else if (exp_Boligertattibruki2022_5rule1_eval_expression(context)) {
+                else if (exp_Boligertattibruki2023_7rule1_eval_expression(context)) {
                   return {
-                pane: 'pane_Boligertattibruki2022_5',
+                pane: 'pane_Boligertattibruki2023_7',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(0,0,0,0.0)',
@@ -530,74 +562,54 @@
                 return {fill: false, stroke: false};
             }
         }
-        map.createPane('pane_Boligertattibruki2022_5');
-        map.getPane('pane_Boligertattibruki2022_5').style.zIndex = 405;
-        map.getPane('pane_Boligertattibruki2022_5').style['mix-blend-mode'] = 'normal';
-        var layer_Boligertattibruki2022_5 = new L.geoJson(json_Boligertattibruki2022_5, {
+        map.createPane('pane_Boligertattibruki2023_7');
+        map.getPane('pane_Boligertattibruki2023_7').style.zIndex = 407;
+        map.getPane('pane_Boligertattibruki2023_7').style['mix-blend-mode'] = 'normal';
+        var layer_Boligertattibruki2023_7 = new L.geoJson(json_Boligertattibruki2023_7, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Boligertattibruki2022_5',
-            layerName: 'layer_Boligertattibruki2022_5',
-            pane: 'pane_Boligertattibruki2022_5',
-            onEachFeature: pop_Boligertattibruki2022_5,
+            dataVar: 'json_Boligertattibruki2023_7',
+            layerName: 'layer_Boligertattibruki2023_7',
+            pane: 'pane_Boligertattibruki2023_7',
+            onEachFeature: pop_Boligertattibruki2023_7,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_Boligertattibruki2022_5_0(feature));
+                return L.circleMarker(latlng, style_Boligertattibruki2023_7_0(feature));
             },
         });
-        bounds_group.addLayer(layer_Boligertattibruki2022_5);
-        function pop_Boligertattibruki2023_6(feature, layer) {
+        bounds_group.addLayer(layer_Boligertattibruki2023_7);
+        function pop_Boligertattibruki2024_8(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">X</th>\
-                        <td>' + (feature.properties['X'] !== null ? autolinker.link(feature.properties['X'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Klassifikasjon</th>\
+                        <td>' + (feature.properties['Klassifikasjon'] !== null ? autolinker.link(feature.properties['Klassifikasjon'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Y</th>\
-                        <td>' + (feature.properties['Y'] !== null ? autolinker.link(feature.properties['Y'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Bygningstype</th>\
+                        <td>' + (feature.properties['Bygningstype'] !== null ? autolinker.link(feature.properties['Bygningstype'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">CLASS</th>\
-                        <td>' + (feature.properties['CLASS'] !== null ? autolinker.link(feature.properties['CLASS'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Bygningsstatus</th>\
+                        <td>' + (feature.properties['Bygningsstatus'] !== null ? autolinker.link(feature.properties['Bygningsstatus'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">BYGNINGSNR</th>\
-                        <td>' + (feature.properties['BYGNINGSNR'] !== null ? autolinker.link(feature.properties['BYGNINGSNR'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Dato_gitt_ramme</th>\
+                        <td>' + (feature.properties['Dato_gitt_ramme'] !== null ? autolinker.link(feature.properties['Dato_gitt_ramme'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">TILBYGGSNR</th>\
-                        <td>' + (feature.properties['TILBYGGSNR'] !== null ? autolinker.link(feature.properties['TILBYGGSNR'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Dato_igangsatt</th>\
+                        <td>' + (feature.properties['Dato_igangsatt'] !== null ? autolinker.link(feature.properties['Dato_igangsatt'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">BYGNTYPE</th>\
-                        <td>' + (feature.properties['BYGNTYPE'] !== null ? autolinker.link(feature.properties['BYGNTYPE'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Dato_tatt_i_bruk</th>\
+                        <td>' + (feature.properties['Dato_tatt_i_bruk'] !== null ? autolinker.link(feature.properties['Dato_tatt_i_bruk'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">BYGNSTATUS</th>\
-                        <td>' + (feature.properties['BYGNSTATUS'] !== null ? autolinker.link(feature.properties['BYGNSTATUS'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">GODKJ_D</th>\
-                        <td>' + (feature.properties['GODKJ_D'] !== null ? autolinker.link(feature.properties['GODKJ_D'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">IGANG_D</th>\
-                        <td>' + (feature.properties['IGANG_D'] !== null ? autolinker.link(feature.properties['IGANG_D'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">IBRUK_D</th>\
-                        <td>' + (feature.properties['IBRUK_D'] !== null ? autolinker.link(feature.properties['IBRUK_D'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">KNR</th>\
-                        <td>' + (feature.properties['KNR'] !== null ? autolinker.link(feature.properties['KNR'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">BOLIGIKAP</th>\
-                        <td>' + (feature.properties['BOLIGIKAP'] !== null ? autolinker.link(feature.properties['BOLIGIKAP'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Antall_boliger</th>\
+                        <td>' + (feature.properties['Antall_boliger'] !== null ? autolinker.link(feature.properties['Antall_boliger'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -606,15 +618,15 @@
             var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
             popup.setContent(updatedContent);
         }
-        function style_Boligertattibruki2023_6_0(feature) {
+        function style_Boligertattibruki2024_8_0(feature) {
             var context = {
                 feature: feature,
                 variables: {}
             };
             // Start of if blocks and style check logic
-            if (exp_Boligertattibruki2023_6rule0_eval_expression(context)) {
+            if (exp_Boligertattibruki2024_8rule0_eval_expression(context)) {
                   return {
-                pane: 'pane_Boligertattibruki2023_6',
+                pane: 'pane_Boligertattibruki2024_8',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(0,0,0,0.0)',
@@ -628,9 +640,9 @@
                 interactive: true,
             };
                 }
-                else if (exp_Boligertattibruki2023_6rule1_eval_expression(context)) {
+                else if (exp_Boligertattibruki2024_8rule1_eval_expression(context)) {
                   return {
-                pane: 'pane_Boligertattibruki2023_6',
+                pane: 'pane_Boligertattibruki2024_8',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(0,0,0,0.0)',
@@ -648,75 +660,55 @@
                 return {fill: false, stroke: false};
             }
         }
-        map.createPane('pane_Boligertattibruki2023_6');
-        map.getPane('pane_Boligertattibruki2023_6').style.zIndex = 406;
-        map.getPane('pane_Boligertattibruki2023_6').style['mix-blend-mode'] = 'normal';
-        var layer_Boligertattibruki2023_6 = new L.geoJson(json_Boligertattibruki2023_6, {
+        map.createPane('pane_Boligertattibruki2024_8');
+        map.getPane('pane_Boligertattibruki2024_8').style.zIndex = 408;
+        map.getPane('pane_Boligertattibruki2024_8').style['mix-blend-mode'] = 'normal';
+        var layer_Boligertattibruki2024_8 = new L.geoJson(json_Boligertattibruki2024_8, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Boligertattibruki2023_6',
-            layerName: 'layer_Boligertattibruki2023_6',
-            pane: 'pane_Boligertattibruki2023_6',
-            onEachFeature: pop_Boligertattibruki2023_6,
+            dataVar: 'json_Boligertattibruki2024_8',
+            layerName: 'layer_Boligertattibruki2024_8',
+            pane: 'pane_Boligertattibruki2024_8',
+            onEachFeature: pop_Boligertattibruki2024_8,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_Boligertattibruki2023_6_0(feature));
+                return L.circleMarker(latlng, style_Boligertattibruki2024_8_0(feature));
             },
         });
-        bounds_group.addLayer(layer_Boligertattibruki2023_6);
-        map.addLayer(layer_Boligertattibruki2023_6);
-        function pop_Boligertattibrukhittilir13032024_7(feature, layer) {
+        bounds_group.addLayer(layer_Boligertattibruki2024_8);
+        map.addLayer(layer_Boligertattibruki2024_8);
+        function pop_Boligertattibrukhittilir14022025_9(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">X</th>\
-                        <td>' + (feature.properties['X'] !== null ? autolinker.link(feature.properties['X'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Klassifikasjon</th>\
+                        <td>' + (feature.properties['Klassifikasjon'] !== null ? autolinker.link(feature.properties['Klassifikasjon'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Y</th>\
-                        <td>' + (feature.properties['Y'] !== null ? autolinker.link(feature.properties['Y'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Bygningstype</th>\
+                        <td>' + (feature.properties['Bygningstype'] !== null ? autolinker.link(feature.properties['Bygningstype'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">CLASS</th>\
-                        <td>' + (feature.properties['CLASS'] !== null ? autolinker.link(feature.properties['CLASS'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Bygningsstatus</th>\
+                        <td>' + (feature.properties['Bygningsstatus'] !== null ? autolinker.link(feature.properties['Bygningsstatus'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">BYGNINGSNR</th>\
-                        <td>' + (feature.properties['BYGNINGSNR'] !== null ? autolinker.link(feature.properties['BYGNINGSNR'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Dato_gitt_ramme</th>\
+                        <td>' + (feature.properties['Dato_gitt_ramme'] !== null ? autolinker.link(feature.properties['Dato_gitt_ramme'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">TILBYGGSNR</th>\
-                        <td>' + (feature.properties['TILBYGGSNR'] !== null ? autolinker.link(feature.properties['TILBYGGSNR'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Dato_igangsatt</th>\
+                        <td>' + (feature.properties['Dato_igangsatt'] !== null ? autolinker.link(feature.properties['Dato_igangsatt'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">BYGNTYPE</th>\
-                        <td>' + (feature.properties['BYGNTYPE'] !== null ? autolinker.link(feature.properties['BYGNTYPE'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Dato_tatt_i_bruk</th>\
+                        <td>' + (feature.properties['Dato_tatt_i_bruk'] !== null ? autolinker.link(feature.properties['Dato_tatt_i_bruk'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">BYGNSTATUS</th>\
-                        <td>' + (feature.properties['BYGNSTATUS'] !== null ? autolinker.link(feature.properties['BYGNSTATUS'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">GODKJ_D</th>\
-                        <td>' + (feature.properties['GODKJ_D'] !== null ? autolinker.link(feature.properties['GODKJ_D'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">IGANG_D</th>\
-                        <td>' + (feature.properties['IGANG_D'] !== null ? autolinker.link(feature.properties['IGANG_D'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">IBRUK_D</th>\
-                        <td>' + (feature.properties['IBRUK_D'] !== null ? autolinker.link(feature.properties['IBRUK_D'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">KNR</th>\
-                        <td>' + (feature.properties['KNR'] !== null ? autolinker.link(feature.properties['KNR'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">BOLIGIKAP</th>\
-                        <td>' + (feature.properties['BOLIGIKAP'] !== null ? autolinker.link(feature.properties['BOLIGIKAP'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Antall_boliger</th>\
+                        <td>' + (feature.properties['Antall_boliger'] !== null ? autolinker.link(feature.properties['Antall_boliger'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -725,15 +717,15 @@
             var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
             popup.setContent(updatedContent);
         }
-        function style_Boligertattibrukhittilir13032024_7_0(feature) {
+        function style_Boligertattibrukhittilir14022025_9_0(feature) {
             var context = {
                 feature: feature,
                 variables: {}
             };
             // Start of if blocks and style check logic
-            if (exp_Boligertattibrukhittilir13032024_7rule0_eval_expression(context)) {
+            if (exp_Boligertattibrukhittilir14022025_9rule0_eval_expression(context)) {
                   return {
-                pane: 'pane_Boligertattibrukhittilir13032024_7',
+                pane: 'pane_Boligertattibrukhittilir14022025_9',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(0,0,0,0.0)',
@@ -747,9 +739,9 @@
                 interactive: true,
             };
                 }
-                else if (exp_Boligertattibrukhittilir13032024_7rule1_eval_expression(context)) {
+                else if (exp_Boligertattibrukhittilir14022025_9rule1_eval_expression(context)) {
                   return {
-                pane: 'pane_Boligertattibrukhittilir13032024_7',
+                pane: 'pane_Boligertattibrukhittilir14022025_9',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(0,0,0,0.0)',
@@ -767,75 +759,51 @@
                 return {fill: false, stroke: false};
             }
         }
-        map.createPane('pane_Boligertattibrukhittilir13032024_7');
-        map.getPane('pane_Boligertattibrukhittilir13032024_7').style.zIndex = 407;
-        map.getPane('pane_Boligertattibrukhittilir13032024_7').style['mix-blend-mode'] = 'normal';
-        var layer_Boligertattibrukhittilir13032024_7 = new L.geoJson(json_Boligertattibrukhittilir13032024_7, {
+        map.createPane('pane_Boligertattibrukhittilir14022025_9');
+        map.getPane('pane_Boligertattibrukhittilir14022025_9').style.zIndex = 409;
+        map.getPane('pane_Boligertattibrukhittilir14022025_9').style['mix-blend-mode'] = 'normal';
+        var layer_Boligertattibrukhittilir14022025_9 = new L.geoJson(json_Boligertattibrukhittilir14022025_9, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Boligertattibrukhittilir13032024_7',
-            layerName: 'layer_Boligertattibrukhittilir13032024_7',
-            pane: 'pane_Boligertattibrukhittilir13032024_7',
-            onEachFeature: pop_Boligertattibrukhittilir13032024_7,
+            dataVar: 'json_Boligertattibrukhittilir14022025_9',
+            layerName: 'layer_Boligertattibrukhittilir14022025_9',
+            pane: 'pane_Boligertattibrukhittilir14022025_9',
+            onEachFeature: pop_Boligertattibrukhittilir14022025_9,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_Boligertattibrukhittilir13032024_7_0(feature));
+                return L.circleMarker(latlng, style_Boligertattibrukhittilir14022025_9_0(feature));
             },
         });
-        bounds_group.addLayer(layer_Boligertattibrukhittilir13032024_7);
-        map.addLayer(layer_Boligertattibrukhittilir13032024_7);
-        function pop_Boligerigangsattikketattibruk_8(feature, layer) {
+        bounds_group.addLayer(layer_Boligertattibrukhittilir14022025_9);
+        map.addLayer(layer_Boligertattibrukhittilir14022025_9);
+        function pop_Boligerigangsattikketattibruk_10(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">X</th>\
-                        <td>' + (feature.properties['X'] !== null ? autolinker.link(feature.properties['X'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Klassifikasjon</th>\
+                        <td>' + (feature.properties['Klassifikasjon'] !== null ? autolinker.link(feature.properties['Klassifikasjon'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Y</th>\
-                        <td>' + (feature.properties['Y'] !== null ? autolinker.link(feature.properties['Y'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Bygningstype</th>\
+                        <td>' + (feature.properties['Bygningstype'] !== null ? autolinker.link(feature.properties['Bygningstype'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">CLASS</th>\
-                        <td>' + (feature.properties['CLASS'] !== null ? autolinker.link(feature.properties['CLASS'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Bygningsstatus</th>\
+                        <td>' + (feature.properties['Bygningsstatus'] !== null ? autolinker.link(feature.properties['Bygningsstatus'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">BYGNINGSNR</th>\
-                        <td>' + (feature.properties['BYGNINGSNR'] !== null ? autolinker.link(feature.properties['BYGNINGSNR'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Dato_gitt_ramme</th>\
+                        <td>' + (feature.properties['Dato_gitt_ramme'] !== null ? autolinker.link(feature.properties['Dato_gitt_ramme'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">TILBYGGSNR</th>\
-                        <td>' + (feature.properties['TILBYGGSNR'] !== null ? autolinker.link(feature.properties['TILBYGGSNR'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Dato_igangsatt</th>\
+                        <td>' + (feature.properties['Dato_igangsatt'] !== null ? autolinker.link(feature.properties['Dato_igangsatt'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">BYGNTYPE</th>\
-                        <td>' + (feature.properties['BYGNTYPE'] !== null ? autolinker.link(feature.properties['BYGNTYPE'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">BYGNSTATUS</th>\
-                        <td>' + (feature.properties['BYGNSTATUS'] !== null ? autolinker.link(feature.properties['BYGNSTATUS'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">GODKJ_D</th>\
-                        <td>' + (feature.properties['GODKJ_D'] !== null ? autolinker.link(feature.properties['GODKJ_D'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">IGANG_D</th>\
-                        <td>' + (feature.properties['IGANG_D'] !== null ? autolinker.link(feature.properties['IGANG_D'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">IBRUK_D</th>\
-                        <td>' + (feature.properties['IBRUK_D'] !== null ? autolinker.link(feature.properties['IBRUK_D'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">KNR</th>\
-                        <td>' + (feature.properties['KNR'] !== null ? autolinker.link(feature.properties['KNR'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">BOLIGIKAP</th>\
-                        <td>' + (feature.properties['BOLIGIKAP'] !== null ? autolinker.link(feature.properties['BOLIGIKAP'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Antall_boliger</th>\
+                        <td>' + (feature.properties['Antall_boliger'] !== null ? autolinker.link(feature.properties['Antall_boliger'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -844,15 +812,15 @@
             var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
             popup.setContent(updatedContent);
         }
-        function style_Boligerigangsattikketattibruk_8_0(feature) {
+        function style_Boligerigangsattikketattibruk_10_0(feature) {
             var context = {
                 feature: feature,
                 variables: {}
             };
             // Start of if blocks and style check logic
-            if (exp_Boligerigangsattikketattibruk_8rule0_eval_expression(context)) {
+            if (exp_Boligerigangsattikketattibruk_10rule0_eval_expression(context)) {
                   return {
-                pane: 'pane_Boligerigangsattikketattibruk_8',
+                pane: 'pane_Boligerigangsattikketattibruk_10',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(0,0,0,1.0)',
@@ -866,9 +834,9 @@
                 interactive: true,
             };
                 }
-                else if (exp_Boligerigangsattikketattibruk_8rule1_eval_expression(context)) {
+                else if (exp_Boligerigangsattikketattibruk_10rule1_eval_expression(context)) {
                   return {
-                pane: 'pane_Boligerigangsattikketattibruk_8',
+                pane: 'pane_Boligerigangsattikketattibruk_10',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(0,0,0,1.0)',
@@ -886,75 +854,47 @@
                 return {fill: false, stroke: false};
             }
         }
-        map.createPane('pane_Boligerigangsattikketattibruk_8');
-        map.getPane('pane_Boligerigangsattikketattibruk_8').style.zIndex = 408;
-        map.getPane('pane_Boligerigangsattikketattibruk_8').style['mix-blend-mode'] = 'normal';
-        var layer_Boligerigangsattikketattibruk_8 = new L.geoJson(json_Boligerigangsattikketattibruk_8, {
+        map.createPane('pane_Boligerigangsattikketattibruk_10');
+        map.getPane('pane_Boligerigangsattikketattibruk_10').style.zIndex = 410;
+        map.getPane('pane_Boligerigangsattikketattibruk_10').style['mix-blend-mode'] = 'normal';
+        var layer_Boligerigangsattikketattibruk_10 = new L.geoJson(json_Boligerigangsattikketattibruk_10, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Boligerigangsattikketattibruk_8',
-            layerName: 'layer_Boligerigangsattikketattibruk_8',
-            pane: 'pane_Boligerigangsattikketattibruk_8',
-            onEachFeature: pop_Boligerigangsattikketattibruk_8,
+            dataVar: 'json_Boligerigangsattikketattibruk_10',
+            layerName: 'layer_Boligerigangsattikketattibruk_10',
+            pane: 'pane_Boligerigangsattikketattibruk_10',
+            onEachFeature: pop_Boligerigangsattikketattibruk_10,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_Boligerigangsattikketattibruk_8_0(feature));
+                return L.circleMarker(latlng, style_Boligerigangsattikketattibruk_10_0(feature));
             },
         });
-        bounds_group.addLayer(layer_Boligerigangsattikketattibruk_8);
-        map.addLayer(layer_Boligerigangsattikketattibruk_8);
-        function pop_Boligergodkjentikkeigangsatt_9(feature, layer) {
+        bounds_group.addLayer(layer_Boligerigangsattikketattibruk_10);
+        map.addLayer(layer_Boligerigangsattikketattibruk_10);
+        function pop_Boligergodkjentikkeigangsatt_11(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">X</th>\
-                        <td>' + (feature.properties['X'] !== null ? autolinker.link(feature.properties['X'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Klassifikasjon</th>\
+                        <td>' + (feature.properties['Klassifikasjon'] !== null ? autolinker.link(feature.properties['Klassifikasjon'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Y</th>\
-                        <td>' + (feature.properties['Y'] !== null ? autolinker.link(feature.properties['Y'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Bygningstype</th>\
+                        <td>' + (feature.properties['Bygningstype'] !== null ? autolinker.link(feature.properties['Bygningstype'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">CLASS</th>\
-                        <td>' + (feature.properties['CLASS'] !== null ? autolinker.link(feature.properties['CLASS'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Bygningsstatus</th>\
+                        <td>' + (feature.properties['Bygningsstatus'] !== null ? autolinker.link(feature.properties['Bygningsstatus'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">BYGNINGSNR</th>\
-                        <td>' + (feature.properties['BYGNINGSNR'] !== null ? autolinker.link(feature.properties['BYGNINGSNR'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Dato_gitt_ramme</th>\
+                        <td>' + (feature.properties['Dato_gitt_ramme'] !== null ? autolinker.link(feature.properties['Dato_gitt_ramme'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">TILBYGGSNR</th>\
-                        <td>' + (feature.properties['TILBYGGSNR'] !== null ? autolinker.link(feature.properties['TILBYGGSNR'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">BYGNTYPE</th>\
-                        <td>' + (feature.properties['BYGNTYPE'] !== null ? autolinker.link(feature.properties['BYGNTYPE'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">BYGNSTATUS</th>\
-                        <td>' + (feature.properties['BYGNSTATUS'] !== null ? autolinker.link(feature.properties['BYGNSTATUS'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">GODKJ_D</th>\
-                        <td>' + (feature.properties['GODKJ_D'] !== null ? autolinker.link(feature.properties['GODKJ_D'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">IGANG_D</th>\
-                        <td>' + (feature.properties['IGANG_D'] !== null ? autolinker.link(feature.properties['IGANG_D'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">IBRUK_D</th>\
-                        <td>' + (feature.properties['IBRUK_D'] !== null ? autolinker.link(feature.properties['IBRUK_D'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">KNR</th>\
-                        <td>' + (feature.properties['KNR'] !== null ? autolinker.link(feature.properties['KNR'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">BOLIGIKAP</th>\
-                        <td>' + (feature.properties['BOLIGIKAP'] !== null ? autolinker.link(feature.properties['BOLIGIKAP'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Antall_boliger</th>\
+                        <td>' + (feature.properties['Antall_boliger'] !== null ? autolinker.link(feature.properties['Antall_boliger'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -963,15 +903,15 @@
             var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
             popup.setContent(updatedContent);
         }
-        function style_Boligergodkjentikkeigangsatt_9_0(feature) {
+        function style_Boligergodkjentikkeigangsatt_11_0(feature) {
             var context = {
                 feature: feature,
                 variables: {}
             };
             // Start of if blocks and style check logic
-            if (exp_Boligergodkjentikkeigangsatt_9rule0_eval_expression(context)) {
+            if (exp_Boligergodkjentikkeigangsatt_11rule0_eval_expression(context)) {
                   return {
-                pane: 'pane_Boligergodkjentikkeigangsatt_9',
+                pane: 'pane_Boligergodkjentikkeigangsatt_11',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(0,0,0,0.0)',
@@ -985,9 +925,9 @@
                 interactive: true,
             };
                 }
-                else if (exp_Boligergodkjentikkeigangsatt_9rule1_eval_expression(context)) {
+                else if (exp_Boligergodkjentikkeigangsatt_11rule1_eval_expression(context)) {
                   return {
-                pane: 'pane_Boligergodkjentikkeigangsatt_9',
+                pane: 'pane_Boligergodkjentikkeigangsatt_11',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(0,0,0,0.0)',
@@ -1005,38 +945,40 @@
                 return {fill: false, stroke: false};
             }
         }
-        map.createPane('pane_Boligergodkjentikkeigangsatt_9');
-        map.getPane('pane_Boligergodkjentikkeigangsatt_9').style.zIndex = 409;
-        map.getPane('pane_Boligergodkjentikkeigangsatt_9').style['mix-blend-mode'] = 'normal';
-        var layer_Boligergodkjentikkeigangsatt_9 = new L.geoJson(json_Boligergodkjentikkeigangsatt_9, {
+        map.createPane('pane_Boligergodkjentikkeigangsatt_11');
+        map.getPane('pane_Boligergodkjentikkeigangsatt_11').style.zIndex = 411;
+        map.getPane('pane_Boligergodkjentikkeigangsatt_11').style['mix-blend-mode'] = 'normal';
+        var layer_Boligergodkjentikkeigangsatt_11 = new L.geoJson(json_Boligergodkjentikkeigangsatt_11, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Boligergodkjentikkeigangsatt_9',
-            layerName: 'layer_Boligergodkjentikkeigangsatt_9',
-            pane: 'pane_Boligergodkjentikkeigangsatt_9',
-            onEachFeature: pop_Boligergodkjentikkeigangsatt_9,
+            dataVar: 'json_Boligergodkjentikkeigangsatt_11',
+            layerName: 'layer_Boligergodkjentikkeigangsatt_11',
+            pane: 'pane_Boligergodkjentikkeigangsatt_11',
+            onEachFeature: pop_Boligergodkjentikkeigangsatt_11,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_Boligergodkjentikkeigangsatt_9_0(feature));
+                return L.circleMarker(latlng, style_Boligergodkjentikkeigangsatt_11_0(feature));
             },
         });
-        bounds_group.addLayer(layer_Boligergodkjentikkeigangsatt_9);
-        map.addLayer(layer_Boligergodkjentikkeigangsatt_9);
+        bounds_group.addLayer(layer_Boligergodkjentikkeigangsatt_11);
+        map.addLayer(layer_Boligergodkjentikkeigangsatt_11);
         var baseMaps = {};
         var overlaysTree = [
-            {label: 'Boliger godkjent, ikke igangsatt<br /><table><tr><td style="text-align: center;"><img src="legend/Boligergodkjentikkeigangsatt_9_0.png" /></td><td></td></tr><tr><td style="text-align: center;"><img src="legend/Boligergodkjentikkeigangsatt_9_1.png" /></td><td></td></tr></table>', layer: layer_Boligergodkjentikkeigangsatt_9},
-            {label: 'Boliger igangsatt, ikke tatt i bruk<br /><table><tr><td style="text-align: center;"><img src="legend/Boligerigangsattikketattibruk_8_0.png" /></td><td></td></tr><tr><td style="text-align: center;"><img src="legend/Boligerigangsattikketattibruk_8_1.png" /></td><td></td></tr></table>', layer: layer_Boligerigangsattikketattibruk_8},
-            {label: 'Boliger tatt i bruk hittil i år (13.03.2024)<br /><table><tr><td style="text-align: center;"><img src="legend/Boligertattibrukhittilir13032024_7_0.png" /></td><td></td></tr><tr><td style="text-align: center;"><img src="legend/Boligertattibrukhittilir13032024_7_1.png" /></td><td></td></tr></table>', layer: layer_Boligertattibrukhittilir13032024_7},
-            {label: 'Boliger tatt i bruk i 2023<br /><table><tr><td style="text-align: center;"><img src="legend/Boligertattibruki2023_6_0.png" /></td><td></td></tr><tr><td style="text-align: center;"><img src="legend/Boligertattibruki2023_6_1.png" /></td><td></td></tr></table>', layer: layer_Boligertattibruki2023_6},
-            {label: 'Boliger tatt i bruk i 2022<br /><table><tr><td style="text-align: center;"><img src="legend/Boligertattibruki2022_5_0.png" /></td><td></td></tr><tr><td style="text-align: center;"><img src="legend/Boligertattibruki2022_5_1.png" /></td><td></td></tr></table>', layer: layer_Boligertattibruki2022_5},
-            {label: 'Boliger tatt i bruk i 2021<br /><table><tr><td style="text-align: center;"><img src="legend/Boligertattibruki2021_4_0.png" /></td><td></td></tr><tr><td style="text-align: center;"><img src="legend/Boligertattibruki2021_4_1.png" /></td><td></td></tr></table>', layer: layer_Boligertattibruki2021_4},
-            {label: '<img src="legend/Boligfeltper22082023_3.png" /> Boligfelt per 22.08.2023', layer: layer_Boligfeltper22082023_3},
-            {label: '<img src="legend/InngriUspesifisertSpredtogAndrefelt_2.png" /> Inngår i Uspesifisert, Spredt og Andre felt', layer: layer_InngriUspesifisertSpredtogAndrefelt_2},
-            {label: '<img src="legend/TR2023PlansoneogSkolekretsdeler_1.png" /> TR2023 Plansone og Skolekretsdeler', layer: layer_TR2023PlansoneogSkolekretsdeler_1},
-            {label: "Topografisk bakgrunnskart (ESRI)", layer: layer_TopografiskbakgrunnskartESRI_0},]
+            {label: 'Boliger godkjent, ikke igangsatt<br /><table><tr><td style="text-align: center;"><img src="legend/Boligergodkjentikkeigangsatt_11_0.png" /></td><td></td></tr><tr><td style="text-align: center;"><img src="legend/Boligergodkjentikkeigangsatt_11_1.png" /></td><td></td></tr></table>', layer: layer_Boligergodkjentikkeigangsatt_11},
+            {label: 'Boliger igangsatt, ikke tatt i bruk<br /><table><tr><td style="text-align: center;"><img src="legend/Boligerigangsattikketattibruk_10_0.png" /></td><td></td></tr><tr><td style="text-align: center;"><img src="legend/Boligerigangsattikketattibruk_10_1.png" /></td><td></td></tr></table>', layer: layer_Boligerigangsattikketattibruk_10},
+            {label: 'Boliger tatt i bruk hittil i år (14.02.2025)<br /><table><tr><td style="text-align: center;"><img src="legend/Boligertattibrukhittilir14022025_9_0.png" /></td><td></td></tr><tr><td style="text-align: center;"><img src="legend/Boligertattibrukhittilir14022025_9_1.png" /></td><td></td></tr></table>', layer: layer_Boligertattibrukhittilir14022025_9},
+            {label: 'Boliger tatt i bruk i 2024<br /><table><tr><td style="text-align: center;"><img src="legend/Boligertattibruki2024_8_0.png" /></td><td></td></tr><tr><td style="text-align: center;"><img src="legend/Boligertattibruki2024_8_1.png" /></td><td></td></tr></table>', layer: layer_Boligertattibruki2024_8},
+            {label: 'Boliger tatt i bruk i 2023<br /><table><tr><td style="text-align: center;"><img src="legend/Boligertattibruki2023_7_0.png" /></td><td></td></tr><tr><td style="text-align: center;"><img src="legend/Boligertattibruki2023_7_1.png" /></td><td></td></tr></table>', layer: layer_Boligertattibruki2023_7},
+            {label: 'Boliger tatt i bruk i 2013-2022<br /><table><tr><td style="text-align: center;"><img src="legend/Boligertattibruki20132022_6_0.png" /></td><td></td></tr><tr><td style="text-align: center;"><img src="legend/Boligertattibruki20132022_6_1.png" /></td><td></td></tr></table>', layer: layer_Boligertattibruki20132022_6},
+            {label: '<img src="legend/Boligfeltper19092024_5.png" /> Boligfelt per 19.09.2024', layer: layer_Boligfeltper19092024_5},
+            {label: '<img src="legend/InngriUspesifisertSpredtogAndrefelt_4.png" /> Inngår i Uspesifisert, Spredt og Andre felt', layer: layer_InngriUspesifisertSpredtogAndrefelt_4},
+            {label: '<img src="legend/TR2024Barneskolekretser_3.png" /> TR2024 Barneskolekretser', layer: layer_TR2024Barneskolekretser_3},
+            {label: '<img src="legend/TR2024Ungdomsskolekretser_2.png" /> TR2024 Ungdomsskolekretser', layer: layer_TR2024Ungdomsskolekretser_2},
+            {label: '<img src="legend/TR2024PlansoneogSkolekretsdeler_1.png" /> TR2024 Plansone og Skolekretsdeler', layer: layer_TR2024PlansoneogSkolekretsdeler_1},
+            {label: "OpenStreetMap", layer: layer_OpenStreetMap_0},]
         var lay = L.control.layers.tree(null, overlaysTree,{
             //namedToggle: true,
             //selectorBack: false,
@@ -1048,15 +990,15 @@
         });
         lay.addTo(map);
         setBounds();
-        resetLabels([layer_Boligertattibruki2023_6,layer_Boligertattibrukhittilir13032024_7,layer_Boligergodkjentikkeigangsatt_9]);
+        resetLabels([layer_Boligertattibruki2024_8,layer_Boligertattibrukhittilir14022025_9,layer_Boligergodkjentikkeigangsatt_11]);
         map.on("zoomend", function(){
-            resetLabels([layer_Boligertattibruki2023_6,layer_Boligertattibrukhittilir13032024_7,layer_Boligergodkjentikkeigangsatt_9]);
+            resetLabels([layer_Boligertattibruki2024_8,layer_Boligertattibrukhittilir14022025_9,layer_Boligergodkjentikkeigangsatt_11]);
         });
         map.on("layeradd", function(){
-            resetLabels([layer_Boligertattibruki2023_6,layer_Boligertattibrukhittilir13032024_7,layer_Boligergodkjentikkeigangsatt_9]);
+            resetLabels([layer_Boligertattibruki2024_8,layer_Boligertattibrukhittilir14022025_9,layer_Boligergodkjentikkeigangsatt_11]);
         });
         map.on("layerremove", function(){
-            resetLabels([layer_Boligertattibruki2023_6,layer_Boligertattibrukhittilir13032024_7,layer_Boligergodkjentikkeigangsatt_9]);
+            resetLabels([layer_Boligertattibruki2024_8,layer_Boligertattibrukhittilir14022025_9,layer_Boligergodkjentikkeigangsatt_11]);
         });
         </script>
     </body>
